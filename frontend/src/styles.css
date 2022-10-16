@@ -1,0 +1,50 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+    background-color: #202124;
+    margin: 0px !important;
+}
+
+button {
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: #202124;
+    color: white;
+    padding: 10px 15px;
+}
+
+button:hover {
+    background-color: #303134;
+}
+
+.button {
+    border: none;
+    border-radius: 5px;
+    background-color: #372948;
+    color: white;
+    padding: 10px 15px;
+}
+
+.button:hover {
+    background-color: #251B37;
+}
+
+div {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 200;
+    font-size: medium;
+}
+
+P {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 200;
+    font-size: medium;
+}
+
+
+/* dark_violet: 251B37
+violet: 372948
+pink: FFCACA
+light_pink: FFECEF */

@@ -1,0 +1,41 @@
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input_text {
+    border: 1px solid white;
+    background-color: #303134;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: grey;
+    min-width: 200px;
+}
+
+.title {
+    font-size: x-large;
+    font-weight: 400;
+    margin-bottom: 25px;
+    margin-top: 30px;
+}
+
+.option_dropdown {
+    padding: 3px 0px;
+    border-radius: 3px;
+    margin: 20px;
+}
+
+.small_title {
+    font-size: smaller;
+    font-weight: 100;
+    margin-bottom: 5px;
+}

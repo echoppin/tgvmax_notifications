@@ -1,0 +1,23 @@
+<div class="home">
+    <div class="title">Créer une alerte</div>
+    <form class="form" #userName="ngForm" (ngSubmit)="onClickSubmit(userName.value)">
+        <div class="small_title">Date</div>
+        <input class="input_text" type="date" name="date" placeholder="date" ngModel>
+        <br/>
+        <br/>
+        <div class="small_title">Départ</div>
+        <select class="input_text" name="depart" form="depart" ngModel required>
+            <option hidden value="" disabled selected>Départ</option>
+            <option class="option_dropdown" *ngFor="let destination of destinations">{{destination}}</option>
+        </select>
+        <br/>
+        <br/>
+        <div class="small_title">Arrivé</div>
+        <select class="input_text" name="destination" form="Destination" ngModel required>
+            <option hidden value="" disabled selected>Destination</option>
+            <option *ngFor="let destination of destinations">{{destination}}</option>
+        </select> <br/>
+        <br/>
+        <input class="button" type="submit" value="Créer une alerte">
+    </form>
+</div>
