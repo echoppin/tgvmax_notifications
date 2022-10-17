@@ -8,29 +8,22 @@ const serializer_sncf = require("./serializer_sncf");
 
 const app = express();
 
+var corsOptions = {
+    origin: 'http://localhost:4200',
+    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+}
+
 app.use(express.json());
 app.use(cors());
 
-app.get("/outfit", (req, res) => {
-    const tops = ["Black", "White", "Orange", "Navy"];
-    const jeans = ["Grey", "Dark Grey", "Black", "Navy"];
-    const shoes = ["White", "Grey", "Black"];
-
-    res.json({
-        top: _.sample(tops),
-        jeans: _.sample(jeans),
-        shoes: _.sample(shoes)
-    });
-});
-
-app.post("/definetrip", async(req, res) => {
+app.post("/definetrip",cors(corsOptions), async(req, res) => {
     const body = req.body;
 
     if (!body || !serializer_sncf.serilizer_definetrip(body)) {
         return res.sendStatus(400);
     }
 
-    const sncf_response = await serializer_sncf.serializer_output_definetrip(body.body)
+    const sncf_response = await serializer_sncf.serializer_output_definetrip(body)
 
     res.status(201).json({
         sncf_response: sncf_response

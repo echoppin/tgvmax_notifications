@@ -11,8 +11,10 @@ function serilizer_definetrip(body) {
 }
 
 function serializer_output_definetrip(body) {
-    return request_sncf.get_price(body)
-
+    const sncf_response = request_sncf.get_price(body).then((response) => {
+        console.log("sncf_response")
+        console.log(response)
+        return response})
 }
 
 
