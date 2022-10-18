@@ -20,14 +20,15 @@ let proxyGenerator = new Promise((resolve, reject) => {
         });
         } else {
         console.log("Error loading proxy, please try again");
+        reject("not 200 response")
         }
 
         ip_addresses.join(", ");
         port_numbers.join(", ");
         let random_number = Math.floor(Math.random() * 100);
 
-        // let proxy = `http://${ip_addresses[random_number]}:${port_numbers[random_number]}`;
-        let proxy ={ip: "http://" + ip_addresses[random_number], port: port_numbers[random_number]};
+        let proxy = `http://${ip_addresses[random_number]}:${port_numbers[random_number]}`;
+        // let proxy ={ip: "http://" + ip_addresses[random_number], port: port_numbers[random_number]};
         resolve(proxy);
     });
 
