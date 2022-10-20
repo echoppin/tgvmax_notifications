@@ -25,9 +25,7 @@ app.post("/definetrip",cors(corsOptions), async(req, res) => {
 
     const sncf_response = await serializer_sncf.serializer_output_definetrip(body)
 
-    res.status(201).json({
-        sncf_response: sncf_response
-    });
+    res.status(201).json("request posted");
 });
 
 app.post("/setuser", async(req, res) => {

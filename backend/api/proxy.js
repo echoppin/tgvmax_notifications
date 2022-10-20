@@ -6,7 +6,7 @@ let proxyGenerator = new Promise((resolve, reject) => {
   let ip_addresses = [];
   let port_numbers = [];
   let proxy;
-
+    console.log("ENTER PROXY")
     request("https://sslproxies.org/", function(error, response, html) {
         if (!error && response.statusCode == 200) {
         const $ = cheerio.load(html);

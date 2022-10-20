@@ -41,7 +41,7 @@ export class HomeComponent implements OnInit {
     const destination_id = await this.text_to_id(result.destination)
 
     const body = {
-      date: result.date+ 'T11:01:16.879Z',
+      date: result.date,
       origin_id: depart_id,
       origin_label: result.depart,
       destination_id: destination_id,
